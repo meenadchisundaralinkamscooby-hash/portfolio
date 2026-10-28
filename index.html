@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Python automation, Linux servers, AI integration, and media pipelines — tested against real behavior, running 24/7.">
-<title>Systems &amp; Automation Engineer — Portfolio</title>
+<meta name="description" content="Self-taught full-stack developer in Markham. Keytag, FitNess Pal, Toploader, and claimcheck. React and TypeScript only in FitNess Pal.">
+<title>Subethan Meenadchisundaralinkam — Web and mobile</title>
 <style>
   :root {
     --paper: #f3f6f2;
@@ -127,6 +127,10 @@
   }
   a.btn:hover { filter: brightness(1.1); }
   a.btn:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 240px)); gap: 1rem; margin: .8rem 0 1rem; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
+  .shots figcaption { font-size: .78rem; color: var(--muted); margin-top: .35rem; }
   @media (prefers-reduced-motion: no-preference) {
     a.btn { transition: filter .15s ease; }
   }
@@ -135,121 +139,72 @@
 <body>
 
 <div class="wrap">
-  <p class="eyebrow">Systems &amp; Automation Engineer · Python / Linux / AI</p>
-  <h1>I automate the boring and fix the broken.</h1>
-  <p class="lede">Python scripts, Linux servers, media pipelines, and AI integrations that run 24/7 — <strong>tested against real behavior, with proof, not promises.</strong> Everything below is real and running in production on my own infrastructure.</p>
-
-  <div class="term" role="img" aria-label="Terminal log showing automated watchdog healing and AI fact-checking">
-    <div><span class="cmd">$</span> tail -f ops/watchdog.log</div>
-    <div><span class="dim">03:12:04</span> [WATCHDOG] agent silent 47m — log growing but no complete line → <span class="warn">flagged</span></div>
-    <div><span class="dim">03:12:05</span> [HEAL] respawned agent window · 60m cooldown · incident logged → <span class="ok">recovered</span></div>
-    <div><span class="dim">05:30:11</span> [FACT-CHECK] 14 AI stat claims audited vs experiments.db → 13 <span class="ok">✓</span> · 1 <span class="warn">flagged: no DB row — likely invented</span></div>
-    <div><span class="dim">05:30:12</span> [REPORT] verdicts written to knowledge base → <span class="ok">done</span></div>
-  </div>
-  <p class="term-caption">Real output from my self-healing ops layer: it repairs hung services automatically and catches AI hallucinations before they ship.</p>
+  <p class="eyebrow">Full-stack web and mobile · Markham, Ontario</p>
+  <h1>I ship the app, the API, and the tests.</h1>
+  <p class="lede">Self-taught. No degree, and no paid developer job yet. <strong>React and TypeScript are only in FitNess Pal.</strong> Keytag and Toploader are vanilla JavaScript.</p>
 
   <section>
-    <h2>What I do</h2>
-    <div class="svc-grid">
-      <div class="svc">
-        <h3>Python automation &amp; scraping</h3>
-        <p>Data collection, API glue, scheduled jobs, Excel/CSV wrangling — with error handling and docs, so it keeps working after I'm gone.</p>
-      </div>
-      <div class="svc">
-        <h3>Linux servers &amp; reliability</h3>
-        <p>Docker stacks, cron/systemd services, monitoring with auto-recovery, migrations. Services that restart themselves at 3am.</p>
-      </div>
-      <div class="svc">
-        <h3>AI integration with guardrails</h3>
-        <p>Claude/GPT or fully local LLMs (Ollama) wired into your workflow — with validation layers that catch AI errors instead of shipping them.</p>
-      </div>
-      <div class="svc">
-        <h3>Media &amp; video pipelines</h3>
-        <p>ffmpeg encoding and streaming (HLS, NVENC GPU acceleration), Jellyfin/Plex automation, IPTV resolving and restreaming.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Selected work — all running in production</h2>
+    <h2>Shipped</h2>
 
     <div class="proj">
       <div class="proj-head">
-        <h3>Self-healing AI operations platform</h3>
-        <span class="chip">running in production</span>
+        <h3>Keytag</h3>
+        <span class="chip">web, iOS, Android</span>
       </div>
-      <ul>
-        <li>Watchdog with auto-heal: detects crashed <em>and</em> silently-hung processes (alive but stuck mid-stream) and repairs them via tmux session management, with cooldowns against crash-loops and a full audit trail.</li>
-        <li>AI fact-checking layer: a deterministic auditor cross-checks every statistical claim a local LLM agent writes against a SQLite database — it has caught real AI fabrications in production, with a diagnosis for each.</li>
-        <li>Evidence-gated automation: the AI proposes config changes, but a hard code gate rejects anything not backed by a verifiable experiment from the same cycle.</li>
-      </ul>
-      <p class="stack">Python · Bash · SQLite · tmux · cron · Ollama · systemd — open source: <a href="https://github.com/meenadchisundaralinkamscooby-hash/tmux-sentinel">tmux-sentinel</a> (14-check selftest) · <a href="https://github.com/meenadchisundaralinkamscooby-hash/claimcheck">claimcheck</a> (49 tests, zero dependencies)</p>
+      <p>Scheduling and GPS time-clock for an 80-person valet company. Node.js API with no framework and no npm dependencies, vanilla JavaScript front end, Capacitor shells for iOS and Android. The first version shipped in six days, 20–25 Sep 2026. It now has 155 automated tests. I loaded one real week of the company's schedule so the office could try it. The office has not switched over.</p>
+      <div class="shots">
+        <figure>
+          <img src="shots/keytag-schedule.png" alt="Keytag office schedule for a demo company, with a hotel job and the valets assigned to it.">
+          <figcaption>Schedule. Demo company, sample names.</figcaption>
+        </figure>
+        <figure>
+          <img src="shots/keytag-timesheet.png" alt="Keytag office timesheet for a demo company, with hours to review and a payroll export.">
+          <figcaption>Timesheets. Same demo company.</figcaption>
+        </figure>
+      </div>
+      <p class="stack">JavaScript · Node.js · SQLite · Capacitor · Leaflet. Not React.</p>
     </div>
 
     <div class="proj">
       <div class="proj-head">
-        <h3>Quantitative research pipeline</h3>
-        <span class="chip">running in production</span>
+        <h3>FitNess Pal</h3>
+        <span class="chip">React + TypeScript</span>
       </div>
       <ul>
-        <li>Fee-aware backtesting engine over 180 days × 38 crypto pairs, with merge-on-write caching that makes data truncation structurally impossible.</li>
-        <li>A local LLM agent invents trading strategies as validated JSON (a small DSL), backtests them, and forward-tests survivors in a paper lane that uses the <em>same evaluator</em> as the backtester — eliminating backtest/live drift.</li>
-        <li>Automatic promotion staging at statistical thresholds (n≥30, expectancy faithful to backtest), plus an XGBoost price-direction predictor (22 features) running continuously.</li>
+        <li>The one project in React and TypeScript. Android app via Capacitor. A photo of a meal or a workout screenshot becomes logged nutrition or sets.</li>
+        <li>Food-photo analysis went from a 150-second timeout to 2–11 seconds by switching vision models. A unit bug that would have logged pounds as kilograms is fixed.</li>
       </ul>
-      <p class="stack">Python · NumPy · XGBoost · ccxt (Kraken/Binance) · SQLite</p>
+      <p class="stack">React · TypeScript · Vite · Tailwind · Capacitor</p>
     </div>
 
     <div class="proj">
       <div class="proj-head">
-        <h3>Home media platform — full automation</h3>
-        <span class="chip">running in production</span>
+        <h3>Toploader</h3>
+        <span class="chip">Android</span>
       </div>
       <ul>
-        <li>Docker stack (Jellyfin, Radarr, Sonarr, Prowlarr, qBittorrent): fully automated acquisition → organization → streaming.</li>
-        <li>Storage crisis solved via the Radarr API: audited a 90%-full drive, re-acquired 10 wasteful titles under a new quality policy — usage dropped 90% → 46% with zero library loss.</li>
-        <li>GPU transcoding pinned by UUID on a dual-GPU box (NVENC on one card, AI workloads untouched on the other); custom Python+ffmpeg IPTV resolver/restreamer with a 177-channel automated health probe.</li>
+        <li>Card scanner for my own One Piece and Pokémon collection. Vanilla JavaScript, not React. On-device text recognition, then a photo match.</li>
+        <li>469 of 500 correct on my synthetic test set. Catalog of 25,000+ cards.</li>
       </ul>
-      <p class="stack">Docker · Python · ffmpeg/NVENC · REST APIs · HLS</p>
+      <p class="stack">JavaScript · Vite · Capacitor · Google ML Kit</p>
     </div>
 
     <div class="proj">
       <div class="proj-head">
-        <h3>Linux infrastructure &amp; reliability</h3>
-        <span class="chip">running in production</span>
+        <h3>claimcheck</h3>
+        <span class="chip">open source</span>
       </div>
-      <ul>
-        <li>Multi-machine fleet (Fedora workstation, Ubuntu server, macOS) over Tailscale, with unattended @reboot orchestration that brings the full stack up in dependency order.</li>
-        <li>Two-way synced knowledge base with hourly git snapshots for corruption-proof history.</li>
-        <li>Semantic search over personal documents using local embeddings (nomic-embed-text + SQLite vector store).</li>
-      </ul>
-      <p class="stack">Linux · Tailscale · git · rsync · local embeddings</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>How I work</h2>
-    <div class="how">
-      <div class="how-item">
-        <span class="mark">✓</span>
-        <p><strong>I verify everything.</strong> No "should work" — I test the actual behavior and send you the output as proof.</p>
-      </div>
-      <div class="how-item">
-        <span class="mark">✓</span>
-        <p><strong>Backups before every risky change.</strong> Every modification I make to your system is reversible and documented.</p>
-      </div>
-      <div class="how-item">
-        <span class="mark">✓</span>
-        <p><strong>Clear communication, honest estimates.</strong> If something is out of scope or a bad idea, I'll say so before you spend money on it.</p>
-      </div>
+      <p>Python library that checks numbers in AI-written text against real data. 49 tests, zero dependencies, MIT, with CLI exit codes so it can gate a build. <a href="https://github.com/meenadchisundaralinkamscooby-hash/claimcheck">GitHub</a></p>
+      <p class="stack">Python. Not JavaScript.</p>
     </div>
   </section>
 
   <div class="contact">
     <div>
-      <p class="big">Have a task that should run itself?</p>
-      <p class="sub">Available for quick fixes (1–2 hours) and longer builds. Demos and walkthroughs of everything above on request.</p>
+      <p class="big">Looking for a junior software role.</p>
+      <p class="sub">Canadian citizen, Markham. Remote or hybrid in the GTA. Start immediately. $65,000–$80,000 CAD.</p>
     </div>
-    <a class="btn" href="mailto:meenadchisundaralinkam.scooby@gmail.com">email me →</a>
+    <a class="btn" href="mailto:subethan.m@gmail.com">email me →</a>
   </div>
 </div>
 </body>
